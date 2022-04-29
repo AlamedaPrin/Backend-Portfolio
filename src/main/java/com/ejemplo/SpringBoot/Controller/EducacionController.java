@@ -20,37 +20,38 @@ import org.springframework.web.bind.annotation.RestController;
 public class EducacionController {    
     
     @Autowired
-    private IEducacionService eduServ;     
+    private IEducacionService eduServ; 
+
+   // @GetMapping ("/educacion/{idPersona}")
+   // @ResponseBody
+   // public List<Educacion> listarEducacionPorIdPersona(@PathVariable Long idPersona){
+   //     return eduServ.listarEducacionPorIdPersona(idPersona);
+   // }    
     
     @GetMapping ("/educacion")
     @ResponseBody
     public List<Educacion> verEducaciones(){
         return eduServ.verEducacion();
-    }
-    
-    @GetMapping ("/educacion/{idPersona}")
-    public List<Educacion> listarEducacionPorIdPersona(@PathVariable Long idPersona){
-        return eduServ.listarEducacionPorIdPersona(idPersona);
-    }
+    }    
     
     @DeleteMapping ("/educacion/{id}")
-    public void borrarEducacion(@PathVariable Long id){
+    public void eliminarEducacion(@PathVariable Long id){
      eduServ.borrarEducacion(id);
     }  
     
     @PostMapping("/educacion")
-    public void crearEducacion (@RequestBody Educacion edu){
-        eduServ.crearEducacion(edu);
+    public void crearEducacion (@RequestBody Educacion educacion){
+        eduServ.crearEducacion(educacion);
     }
     
     
-    @GetMapping ("/educacion/{id}")
-    @ResponseBody
-    public Educacion obtenerEducacion (@PathVariable Long id){
-      return eduServ.buscarEducacion(id);
-    }
+   // @GetMapping ("/educacion/{id}")
+   // @ResponseBody
+   // public Educacion obtenerEducacion (@PathVariable Long id){
+   //   return eduServ.buscarEducacion(id);
+   // }
     
-    @PutMapping("/educacion")
+    @PutMapping("/educacion/{id}")
     public void modificarEducacion (@RequestBody Educacion educacion){
         eduServ.modificarEducacion(educacion);
     }
