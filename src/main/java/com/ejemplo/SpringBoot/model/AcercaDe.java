@@ -18,14 +18,18 @@ public class AcercaDe {
     Long id;
     @Basic
     String acerca;
+    Long idPersona; 
 
     public AcercaDe() {
     }
 
-    public AcercaDe(Long id, String acerca) {
+    public AcercaDe(Long id, String acerca, Long idPersona) {
         this.id = id;
         this.acerca = acerca;
+        this.idPersona = idPersona;
     }
+
+    
 
    
     

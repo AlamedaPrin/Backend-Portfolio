@@ -18,14 +18,18 @@ public class Proyecto {
     Long id;
     @Basic
     String proyecto;
+    Long idPersona; 
 
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String proyecto) {
+    public Proyecto(Long id, String proyecto, Long idPersona) {
         this.id = id;
         this.proyecto = proyecto;
+        this.idPersona = idPersona;
     }
+
+    
     
     
     

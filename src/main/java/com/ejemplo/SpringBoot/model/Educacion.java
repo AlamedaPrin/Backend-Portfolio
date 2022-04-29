@@ -17,27 +17,28 @@ public class Educacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Basic
-    String school;
-    String img;
     String career;
+    String school;
     String comienzo;
     String fin;
-    Long idPersona;
+    String imgEdu;
+    
 
     public Educacion() {
     }
 
-    public Educacion(Long id, String school, String img, String career, String comienzo, String fin, Long idPersona) {
+    public Educacion(Long id, String career, String school, String comienzo, String fin, String imgEdu) {
         this.id = id;
-        this.school = school;
-        this.img = img;
         this.career = career;
+        this.school = school;
         this.comienzo = comienzo;
         this.fin = fin;
-        this.idPersona = idPersona;
+        this.imgEdu = imgEdu;
+    }
+
+    
     }
     
     
     
     
-}

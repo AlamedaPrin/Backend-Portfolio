@@ -13,22 +13,21 @@ public class EducacionService implements IEducacionService {
     @Autowired
     public EducacionRepository eduReposi;
 
-    @Override
     public List<Educacion> verEducacion() {
         return eduReposi.findAll();
     }
 
-    @Override
+    
     public void crearEducacion(Educacion edu) {
         eduReposi.save(edu);
     }
 
-    @Override
+    
     public void borrarEducacion(Long id) {
         eduReposi.deleteById(id);
     }  
 
-    @Override
+    
     public void modificarEducacion(Educacion educacion) {
         eduReposi.save(educacion);
     }    

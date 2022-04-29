@@ -21,17 +21,21 @@ public class Experiencia {
     String experienciaDos;
     String experienciaTres;
     String experienciaCuatro;
+    Long idPersona;
 
     public Experiencia() {
     }
 
-    public Experiencia(Long id, String experienciaUno, String experienciaDos, String experienciaTres, String experienciaCuatro) {
+    public Experiencia(Long id, String experienciaUno, String experienciaDos, String experienciaTres, String experienciaCuatro, Long idPersona) {
         this.id = id;
         this.experienciaUno = experienciaUno;
         this.experienciaDos = experienciaDos;
         this.experienciaTres = experienciaTres;
         this.experienciaCuatro = experienciaCuatro;
+        this.idPersona = idPersona;
     }
+
+   
     
     
     
