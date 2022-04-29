@@ -9,7 +9,7 @@ public interface IExperienciaService {
     
     public List<Experiencia> verExperiencias();
     
-    public void crearExperiecia (Experiencia exp);
+    public void crearExperiecia (Experiencia experiencia);
     
     public void borrarExperiencia (Long id);
     

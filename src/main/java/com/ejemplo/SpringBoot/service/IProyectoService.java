@@ -9,7 +9,7 @@ public interface IProyectoService {
     
     public List<Proyecto> verProyectos();
     
-    public void crearProyecto(Proyecto proy);
+    public void crearProyecto(Proyecto proyecto);
     
     public void borrarProyecto (Long id);
     
