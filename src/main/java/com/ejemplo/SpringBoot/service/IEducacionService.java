@@ -9,15 +9,13 @@ public interface IEducacionService {
     
     public List<Educacion> verEducacion();     
     
-    public void crearEducacion (Educacion edu);
+    public void crearEducacion (Educacion educacion);
     
-    public void borrarEducacion (Long id);
+    public void borrarEducacion (Long id);     
     
-    public Educacion buscarEducacion (Long id); 
-    
-    public void modificarEducacion (Educacion educacion);   
+    public void modificarEducacion (Educacion educacion);  
 
-    public List<Educacion> listarEducacionPorIdPersona(Long idPersona);
+    
     
     
     
