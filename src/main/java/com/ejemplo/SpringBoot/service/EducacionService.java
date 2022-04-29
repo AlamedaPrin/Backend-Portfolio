@@ -26,22 +26,15 @@ public class EducacionService implements IEducacionService {
     @Override
     public void borrarEducacion(Long id) {
         eduReposi.deleteById(id);
-    }
-
-    @Override
-    public Educacion buscarEducacion(Long id) {
-        return eduReposi.findById(id).orElse(null);
-    }
+    }  
 
     @Override
     public void modificarEducacion(Educacion educacion) {
         eduReposi.save(educacion);
     }    
+
    
-    @Override
-    public List<Educacion> listarEducacionPorIdPersona(Long idPersona) {
-        return eduReposi.findByIdPersona(idPersona);
-    }  
+    
 
   
 
