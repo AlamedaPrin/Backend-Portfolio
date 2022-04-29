@@ -23,8 +23,8 @@ public class ProyectoController {
     private IProyectoService proyServ;    
     
     @PostMapping ("/proyecto")
-    public void agregarProyecto(@RequestBody Proyecto pro){
-      proyServ.crearProyecto(pro);
+    public void agregarProyecto(@RequestBody Proyecto proyecto){
+      proyServ.crearProyecto(proyecto);
     }
     
     @GetMapping("/proyecto")
@@ -39,15 +39,15 @@ public class ProyectoController {
     }
     
     
-    @GetMapping ("/proyecto/{id}")
-    @ResponseBody
-    public Proyecto obtenerProyecto (@PathVariable Long id){
-       return proyServ.buscarProyecto(id);
-    }
+   // @GetMapping ("/proyecto/{id}")
+   // @ResponseBody
+   // public Proyecto obtenerProyecto (@PathVariable Long id){
+   //    return proyServ.buscarProyecto(id);
+   // }
     
-    @PutMapping("/proyecto")
-    public void modificarProyecto (@RequestBody Proyecto proyect){
-        proyServ.modificarProyecto(proyect);
+    @PutMapping("/proyecto/{id}")
+    public void modificarProyecto (@RequestBody Proyecto proyecto){
+        proyServ.modificarProyecto(proyecto);
     }
     
     
