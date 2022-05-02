@@ -11,26 +11,23 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Experiencia {
+public class Skill {
     
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    Long id;
+    Long id; 
     @Basic
-    String tipoDeExperiencia;    
-    
+    String tipoDeSkill;
+    int score;
 
-    public Experiencia() {
+    public Skill() {
     }
 
-    public Experiencia(Long id, String tipoDeExperiencia) {
+    public Skill(Long id, String tipoDeSkill, int score) {
         this.id = id;
-        this.tipoDeExperiencia = tipoDeExperiencia;
+        this.tipoDeSkill = tipoDeSkill;
+        this.score = score;
     }
-
-    
-
-   
     
     
     

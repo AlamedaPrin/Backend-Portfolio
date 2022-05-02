@@ -1,7 +1,8 @@
 
 package com.ejemplo.SpringBoot.Controller;
-import com.ejemplo.SpringBoot.model.Educacion;
-import com.ejemplo.SpringBoot.service.EducacionService;
+
+import com.ejemplo.SpringBoot.model.Skill;
+import com.ejemplo.SpringBoot.service.SkillService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,34 +15,36 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @CrossOrigin (origins = {"http://localhost:4200"})
 @RestController
-public class EducacionController {    
+public class SkillController {
     
     @Autowired
-    private EducacionService eduServ;      
+    private SkillService skillServ;
     
-    @GetMapping ("/educacion")
+    
+    @GetMapping ("/skill")
     @ResponseBody
-    public List<Educacion> verEducaciones(){
-        return eduServ.verEducacion();
-    }    
-    
-    @DeleteMapping ("/educacion/{id}")
-    public void eliminarEducacion(@PathVariable Long id){
-     eduServ.borrarEducacion(id);
-    }  
-    
-    @PostMapping("/educacion")
-    public void crearEducacion (@RequestBody Educacion educacion){
-        eduServ.crearEducacion(educacion);
-    }     
-    
-    @PutMapping("/educacion/{id}")
-    public void modificarEducacion (@RequestBody Educacion educacion){
-        eduServ.modificarEducacion(educacion);
+    public List<Skill> verSkills(){
+     return skillServ.verSkills();
     }
-            
- 
+    
+    @DeleteMapping ("/skill/{id}")
+    public void eliminarSkill(@PathVariable Long id){
+        skillServ.borrarSkill(id);
+    } 
+    
+    @PostMapping ("/skill")
+    public void crearSkill(@RequestBody Skill skill){
+        skillServ.crearSkill(skill);
+    }
+    
+    @PutMapping("/skill/{id}")
+    public void modificarSkill (@RequestBody Skill skill){
+        skillServ.modificarSkill(skill);
+    }
+    
+    
     
 }

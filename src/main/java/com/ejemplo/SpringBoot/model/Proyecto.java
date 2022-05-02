@@ -17,16 +17,15 @@ public class Proyecto {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     Long id;
     @Basic
-    String proyecto;
-    Long idPersona; 
+    String tipoDeProyecto;     
 
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String proyecto, Long idPersona) {
+    public Proyecto(Long id, String tipoDeProyecto, Long idPersona) {
         this.id = id;
-        this.proyecto = proyecto;
-        this.idPersona = idPersona;
+        this.tipoDeProyecto = tipoDeProyecto;
+        
     }
 
     
