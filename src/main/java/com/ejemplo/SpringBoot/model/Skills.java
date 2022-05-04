@@ -1,4 +1,3 @@
-
 package com.ejemplo.SpringBoot.model;
 
 import javax.persistence.Basic;
@@ -11,26 +10,23 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class AcercaDe {
+public class Skills {
     
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    Long id;
+    Long id; 
     @Basic
-    String acerca;    
+    String tipoDeSkill;
+    Number score;
 
-    public AcercaDe() {
+    public Skills() {
     }
 
-    public AcercaDe(Long id, String acerca) {
+    public Skills(Long id, String tipoDeSkill, Number score) {
         this.id = id;
-        this.acerca = acerca;
-        
+        this.tipoDeSkill = tipoDeSkill;
+        this.score = score;
     }
-
-    
-
-   
     
     
     
