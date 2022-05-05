@@ -2,7 +2,7 @@
 package com.ejemplo.SpringBoot.Controller;
 
 import com.ejemplo.SpringBoot.model.Skills;
-import com.ejemplo.SpringBoot.service.SkillsService;
+import com.ejemplo.SpringBoot.service.ISkillsService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SkillsController {    
     
     @Autowired
-    private SkillsService skillServ;    
+    private ISkillsService skillServ;    
     
     @GetMapping("/skills")
     @ResponseBody

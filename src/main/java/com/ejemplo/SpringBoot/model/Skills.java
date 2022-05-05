@@ -1,3 +1,4 @@
+
 package com.ejemplo.SpringBoot.model;
 
 import javax.persistence.Basic;

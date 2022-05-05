@@ -13,8 +13,6 @@ public interface IEducacionService {
     
     public void borrarEducacion (Long id);     
     
-    public void modificarEducacion (Educacion educacion);   
+    public void modificarEducacion (Educacion educacion);    
     
-    
-    
-}
+ }
